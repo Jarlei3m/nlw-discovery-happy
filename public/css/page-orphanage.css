@@ -99,6 +99,8 @@ main {
 .open-details {
     margin-top: 2.4rem;
 
+    line-height: 1.5;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 2rem;
@@ -118,12 +120,23 @@ main {
     background: linear-gradient(149.97deg, #E6F7FB 8.13%, #FFFFFF 92.67%);
     color: #5C8599;
     border: 1px solid #b3dae2;
-    
+
+    min-width: 14rem;
 }
 
-.open-details .open-on-weekends {
+.open-details .open-on-weekends.open {
     background: linear-gradient(154.16deg, #EDFFF6 7.85%, #FFFFFF 91.03%);
     color: #37C77F;
     border: 1px solid #a1e9c5;
+
+    min-width: 14rem;
+}
+
+.open-details .open-on-weekends.closed {
+    background: linear-gradient(154.16deg, #FCF0F4 7.85%, #FFFFFF 91.03%);
+    color: #FF669B;
+    border: 1px solid #FFBCD4;
+
+    min-width: 14rem;
 }
 

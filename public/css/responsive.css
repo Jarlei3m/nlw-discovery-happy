@@ -1,0 +1,172 @@
+/* responsive page-orphanages*/
+
+@media(max-width: 760px) {
+    body #page-orphanages {
+        display: block;
+        overflow: hidden;
+    }
+
+    body #page-orphanages aside {
+        width: 100%;
+        text-align: center;
+    }
+
+    body #page-orphanages aside h2 {
+        margin-top: 1.4rem;
+    }
+
+    body #page-orphanages aside p {
+        margin-top: 0.8rem;
+    }
+
+    body #page-orphanages footer {
+        margin-top: 2rem;
+    }
+
+    body #page-orphanages #mapid {
+        margin: 1rem;
+        width: unset;
+
+        border-radius: 2rem;
+        border: 1px solid #d3dce0;
+
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+
+        transition: all 0.2s ease-out;
+    }
+
+    body #page-orphanages .leaflet-container {
+        font-size: 1.6rem;
+    }
+}
+
+/* responsive page-create-orphanage && page-orphanage*/
+
+@media(max-width: 650px) {
+    #page-create-orphanage aside,
+    #page-orphanage aside {
+        height: unset;
+        width: 100%;
+
+        position: absolute;
+        flex-direction: row-reverse;
+    }
+
+    #page-create-orphanage aside img,
+    #page-orphanage aside img {
+        width: 4rem;
+    }
+
+    aside.sidebar footer button {
+        background: #ffd666;
+    }
+
+    .with-sidebar {
+        padding-left: unset;
+        padding-top: 110px;
+    }
+
+    /* page-create-orphanage */
+
+    form {
+        width: unset;
+        margin: 0.2rem auto;
+        padding: 4rem 2.4rem;
+        border-radius: unset;
+
+        background: #F2F3F5;
+    }
+
+    fieldset legend {
+        font-size: 2.4rem;
+        text-align: center;
+    }
+
+    fieldset label {
+        font-size: 1.6rem;
+    }
+
+    .input-block label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .input-block label span {
+        font-size: 1.2rem;
+    }
+
+    .input-block.images button {
+        height: 5.6rem;
+        width: 100%;
+    }
+
+    .new-upload span {
+        background: transparent;
+        border: none;
+    }
+
+    .button-select button {
+        font-size: 1.6rem;
+    }
+
+    .map-container footer a {
+        font-size: 1.5rem;
+    }
+
+    /* page-orphanage */
+
+    body #page-orphanage {
+        display: unset;
+    }
+
+    main .orphanage-details {
+        width: unset;
+        margin: 0.2rem auto;
+        border-radius: unset;
+
+        background: #F2F3F5;
+    }
+
+    main .orphanage-details > img {
+        height: 26rem;
+    }
+
+    main .orphanage-details-content {
+        padding: 2rem;
+    }
+
+    main .orphanage-details-content h1 {
+        font-size: 3rem;
+    }
+
+    main .orphanage-details-content p {
+        font-size: 1.5rem;
+    }
+
+    main .orphanage-details-content #mapid {
+        margin: unset;
+        box-shadow: unset;
+
+        border: 1px solid #DDE3F0;
+    }
+
+    main .orphanage-details-content .map-container {
+        margin-top: 3.4rem;
+    }
+
+    main .orphanage-details-content h2 {
+        font-size: 2.4rem;
+        line-height: 1.2;
+    }
+
+    main .orphanage-details-content .open-details {
+        column-gap: 0.8rem;
+    }
+
+    main .orphanage-details-content .primary-button {
+        margin-top: 4rem;
+        font-size: 1.6rem;
+    }
+
+}

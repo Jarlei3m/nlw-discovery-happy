@@ -6,23 +6,27 @@ const options = {
     zoomControl: false
 }
 
-const map = L.map('mapid', options).setView([-22.5051203, -44.1591939], 12);
+const spanCoordinates = document.querySelector('.coordinates');
+
+const map = L.map('mapid', options).setView([spanCoordinates.dataset.lat, spanCoordinates.dataset.lng], 14);
 
 // create and add tilelayer
 L.tileLayer(
-    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+    "https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiamFybGVpcm0iLCJhIjoiY2tnOGI5ZmtmMDIxYzJ4cXh3Zmo5YXdybiJ9.ZW_OOvnhUIFd0NKSirLW6Q"
+    // 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 ).addTo(map);
 
 // create icon
 const icon = L.icon({
-    iconUrl: "./public/images/map-marker.svg",
+    iconUrl: "/images/map-marker.svg",
     iconSize: [58, 68],
     iconAnchor: [29, 68],
     popupAnchor: [170, 2]
 })
 
 // create and add marker
-L.marker([-22.5051203, -44.1591939], { icon })
+
+L.marker([spanCoordinates.dataset.lat, spanCoordinates.dataset.lng], { icon })
 .addTo(map)
 
 // image gallery
@@ -44,3 +48,4 @@ function selectImage(event) {
     // add '.active'
     button.classList.add('active');
 }
+

@@ -2,12 +2,13 @@ const map = L.map('mapid').setView([-22.5051203, -44.1591939], 12);
 
 // create and add tilelayer
 L.tileLayer(
-    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+    "https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiamFybGVpcm0iLCJhIjoiY2tnOGI5ZmtmMDIxYzJ4cXh3Zmo5YXdybiJ9.ZW_OOvnhUIFd0NKSirLW6Q"
+    // 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 ).addTo(map);
 
 // create icon
 const icon = L.icon({
-    iconUrl: "./public/images/map-marker.svg",
+    iconUrl: "/images/map-marker.svg",
     iconSize: [58, 68],
     iconAnchor: [29, 68]
 })
@@ -83,4 +84,14 @@ function toggleSelect(event) {
 
     const input = document.querySelector('[name="open_on_weekends"]');
     input.value = option.dataset.value;
+}
+
+// validate form request
+function validate(event) {
+    const inputCoordinates = document.querySelector('.map-container input')
+
+    if(inputCoordinates.value == "") {
+        event.preventDefault()
+        alert('Selecione um ponto no mapa')
+    }
 }
